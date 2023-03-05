@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', \App\Http\Controllers\DeliveryController::class)->only([
-    'index',  // 一覧取得
-]);
+//Route::resource('/', \App\Http\Controllers\DeliveryController::class)->only([
+//    'index',  // 一覧取得
+//]);
+Route::get('/',function(){
+   return file_get_contents(public_path('index.html'));
+});

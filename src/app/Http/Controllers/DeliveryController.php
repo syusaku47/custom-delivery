@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Consts\PrefectureConst;
 use Illuminate\Http\Request;
 
 class DeliveryController extends Controller
 {
     // 配送日設定画面
     public function index(){
-        return view('delivery.index');
+
+        $prefectures = PrefectureConst::LIST;
+
+        return view('delivery.index',[
+            'prefectures' => $prefectures
+        ]);
     }
 }
