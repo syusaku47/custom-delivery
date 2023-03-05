@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::apiResource('delivery', \App\Http\Controllers\Api\DeliveryController::class)->only([
-    'show',  // 情報取得
+    'index',
 ]);
